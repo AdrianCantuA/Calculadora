@@ -7,42 +7,7 @@ function App() {
 	const [error, setError] = useState("");
 
 	// Función para realizar el cálculo
-	/*
-	function calcular() {
-		let num1 = input.split(" ")[0];
-		let num2 = input.split(" ")[2];
-		let num1Int = parseFloat(num1);
-		let num2Int = parseFloat(num2);
-		let operator = input.split(" ")[1];
-
-		// Validar si el input es válido
-		if (isNaN(num1Int) || isNaN(num2Int)) {
-			setError("Invalid input.");
-			return;
-		  }
-
-		// Realizar el cálculo según el operador ingresado
-		switch (operator) {
-			case "+":
-				setResult(num1Int + num2Int);
-				break;
-			case "-":
-				setResult(num1Int - num2Int);
-				break;
-			case "x":
-				setResult(num1Int * num2Int);
-				break;
-			case "/":
-				setResult(num1Int / num2Int);
-				break;
-			case "%":
-				setResult(num1Int % num2Int);
-				break;
-			default:
-				break;
-		}
-		
-	}*/
+	
 	function calcular() {
 		try {
 		  const result = eval(input);
