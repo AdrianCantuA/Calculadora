@@ -7,6 +7,7 @@ function App() {
 	const [error, setError] = useState("");
 
 	// Función para realizar el cálculo
+	/*
 	function calcular() {
 		let num1 = input.split(" ")[0];
 		let num2 = input.split(" ")[2];
@@ -41,7 +42,18 @@ function App() {
 				break;
 		}
 		
-	}
+	}*/
+	function calcular() {
+		try {
+		  const result = eval(input);
+		  console.log(result);
+		  setResult(result);
+		  setError("");
+		} catch (e) {
+		  setResult(0);
+		  setError("Invalid input.");
+		}
+	  }
 
 	// Función para limpiar el input, el resultado y el error
 	const AC = () => {
@@ -63,7 +75,7 @@ function App() {
 				<div className="grid grid-cols-4 bg-blue-400 rounded-xl">					
 					<button className="buttonOp" onClick={AC}>AC</button>					
 					<button className="buttonOp" onClick={() => setInput(prev => prev + " / ")}>/</button>
-					<button className="buttonOp" onClick={() => setInput(prev => prev + " x ")}>x</button>
+					<button className="buttonOp" onClick={() => setInput(prev => prev + " * ")}>x</button>
 					<button className="buttonOp" onClick={() => setInput(prev => prev.slice(0, -1))}>Delete</button>
 
 					<button onClick={() => setInput(prev => prev + "7")}>7</button>
