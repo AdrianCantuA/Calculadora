@@ -9,12 +9,15 @@ function App() {
 	// Función para realizar el cálculo
 	
 	function calcular() {
+	//Utiliza una función eval para evaluar la expresión que se le pase como parámetro y utiliza un try catch para 
+	//verificar si la expresión es válida o no, si es válida se muestra el resultado y si no se muestra un mensaje de error.
 		try {
+		// Se evalua la expresión y se guarda el resultado en la variable result.
 		  const result = eval(input);
-		  console.log(result);
 		  setResult(result);
 		  setError("");
 		} catch (e) {
+		// Si la expresión no es válida se muestra un mensaje de error y se limpia el input y el resultado.
 		  setResult(0);
 		  setError("Invalid input.");
 		}
