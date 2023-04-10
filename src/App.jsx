@@ -7,6 +7,7 @@ function App() {
 	const [error, setError] = useState("");
 
 	// Función para realizar el cálculo
+	/*
 	function calcular() {
 		let num1 = input.split(" ")[0];
 		let num2 = input.split(" ")[2];
